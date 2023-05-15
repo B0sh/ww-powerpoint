@@ -9,8 +9,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.SignBlockEntity;
-import net.minecraft.client.font.FontManager;
-import net.minecraft.client.font.TextRenderer;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.command.argument.BlockPosArgumentType;
 import net.minecraft.server.command.ServerCommandSource;
@@ -66,7 +64,7 @@ public final class PowerpointCommand {
             String url = String.join("", IntStream.range(0, 3).mapToObj((row) -> sign.getTextOnRow(row, false)).map(Text::getString).toArray(String[]::new));
 
             Integer currentFileID = 0;
-            String regex = "(\\d+)(\\.png|\\.jpg)$";
+            String regex = "(\\d+)(\\.png|\\.jpg|\\.jpeg)$";
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(url);
 

@@ -21,5 +21,6 @@ public class PowerpointMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		CommandRegistrationCallback.EVENT.register(PowerpointCommand::register);
+		CommandRegistrationCallback.EVENT.register(WWScoreboardCommand::register);
 	}
 }
